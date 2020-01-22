@@ -57,3 +57,95 @@ html, body {
     height: 100%;
 }
 
+.mainContainer{
+
+
+nav{
+	display:flex;
+padding:20px;
+width:100%;
+justify-content: space-around;
+
+
+@media (max-width: 500px){
+
+	display:flex;
+	flex-direction: column;
+
+	div {
+		display:flex;
+		padding:20px;
+		width:100%;
+		justify-content: space-around;
+	}
+
+}
+}
+
+//mixins
+.center(){
+	display:flex;
+	justify-content: center;
+	text-align:center;
+}
+
+.onecol(){
+	display:flex;
+	justify-content: center;
+	text-align:center;
+	width:100%;
+}
+
+.onecol{
+	.onecol();
+}
+
+img{padding:20px;}
+
+header{
+	.center();
+	background-color: grey;
+}
+
+h1{font-size: 40px;}
+
+.lm{
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 12px;
+    width:110px;
+	margin:20px 0;
+	.center();
+  }
+
+  .threecol{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+  }
+
+  .twocol{
+	.onecol();
+	.center();
+  }
+
+  .intro, .skills{width:50%}
+
+.skills{display: flex;
+flex-direction: column;}
+.threecol div{text-align: left;width:100px}
+
+.twocol, .threecol{margin:10px}
+
+
+
+@variable-name:  #FF0000;
+@variable-name2: arial;
+
+h3, footer {text-align: center;
+color:@variable-name;font-family: @variable-name2;}
+
+h4{color:black;font-size: 10px;}
+
+}
+body{overflow-x: hidden;font-family: 'Gamja Flower', cursive;}
